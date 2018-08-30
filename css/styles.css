@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+:root {
+    --main: #FAF8F5;
+    --white: #FFFFFF;
+    --orange: #BE815B; 
+    --brown: #642E0B;
+    --text: #919191;
+    --shadow: 1px 1px 1px #919191;
+    --border: 1px solid rgb(194, 192, 191);
+}
+
+body {
+    background: var(--main);
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+/* HEADER */
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 100%;
+}
+/* #header onScroll */
+.scroll {
+    background: var(--white);
+    border-bottom: var(--border);
+}
+#header-img {
+    height: 80px;
+    margin-left: 20vw; 
+}
+/* navigation */
+#nav-bar {
+    float: right;
+    margin-right: 20vw;
+}
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#nav-bar ul li {
+    padding: 1.2em;
+}
+#nav-bar ul li a {
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em;
+    color: var(--orange);
+    text-transform: uppercase;
+}
+#nav-bar ul li a:hover {
+    color: var(--brown);
+}
+
+
+/* MAIN */
+main {
+    width: 60vw;
+    margin: 0 auto;
+}
+/* cover */
+#cover {
+    margin-top: 90px;
+}
+h1 {
+    text-align: center;
+    font-size: 2em; 
+}
+.subtitle {
+    color: var(--text);
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+#cover img {
+    width: 30vw;
+}
+
+/* cover-grid */
+.cover-grid {
+    margin-top: 20px;
+    color: var(--text);
+    display: grid;
+    grid-template-areas: 
+    "bm-1 book bm-4"
+    "bm-1 book bm-4"
+    "bm-2 book bm-5"
+    "bm-2 book bm-5"
+    "bm-3 book bm-6"
+    "bm-3 book bm-6";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    align-items: center;
+}
+.bookmarks {
+    background: var(--white);
+    height: 60px;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    font-size: 90%;
+    float: right;
+    text-align: center;
+}
+.bookmarks span {
+    display: block;
+}
+.bookmark-1 {
+    grid-area: bm-1;
+    align-self: end;
+}
+.bookmark-1:hover {
+    animation-name: bm-1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes bm-1 {
+    100% {
+        transform: scale(1.1);
+        background: purple;
+        color: var(--white);
+    }
+}
+.bookmark-2 {
+    grid-area: bm-2;
+}
+.bookmark-2:hover {
+    animation-name: bm-2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes bm-2 {
+    100% {
+        transform: scale(1.1);
+        background: orange;
+        color: var(--white);
+    }
+}
+.bookmark-3 {
+    grid-area: bm-3;
+    align-self: start;
+}
+.bookmark-3:hover {
+    animation-name: bm-3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes bm-3 {
+    100% {
+        transform: scale(1.1);
+        background: green;
+        color: var(--white);
+    }
+}
+.bookmark-4 {
+    grid-area: bm-4;
+    align-self: end;
+}
+.bookmark-4:hover {
+    animation-name: bm-4;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes bm-4 {
+    100% {
+        transform: scale(1.1);
+        background: purple;
+        color: var(--white);
+    }
+}
+.bookmark-5 {
+    grid-area: bm-5;
+}
+.bookmark-5:hover {
+    animation-name: bm-5;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes bm-5 {
+    100% {
+        transform: scale(1.1);
+        background: orange;
+        color: var(--white);
+    }
+}
+.bookmark-6 {
+    grid-area: bm-6;
+    align-self: start;
+}
+.bookmark-6:hover {
+    animation-name: bm-6;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes bm-6 {
+    100% {
+        transform: scale(1.1);
+        background: green;
+        color: var(--white);
+    }
+}
+.cover-grid img {
+    grid-area: book;
+}
+
+
+/* REVIEWS */
+.reviews-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.reviews {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background: var(--white);
+    box-shadow: var(--shadow);
+    color: var(--text);
+    padding: 10px;    
+}
+.reviews img {
+    width: 100px;
+    border-radius: 50%;
+}
+.reviews .names {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.reviews .name-1 {
+    color: purple;
+}
+.reviews .name-2 {
+    color: orange;
+}
+.reviews .name-3 {
+    color: green;
+}
+.reviews .position {
+    margin-top: auto;
+    padding-top: 10px;
+}
+.pos-1 {
+    border-top: 2px solid  purple;
+}
+.pos-2 {
+    border-top: 2px solid  orange;
+}
+.pos-3 {
+    border-top: 2px solid  green;
+}
+.reviews .circle {
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 60px;
+    position: relative;
+    top: -20px;
+    font-family: 'Passion One';
+    text-align: center;
+}
+.reviews .circle-1 {
+    background: purple;
+}
+.reviews .circle-2 {
+    background: orange;
+}
+.reviews .circle-3 {
+    background: green;
+}
+
+/* CONTACT */
+#contact form{
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+form #message {
+    height: 50px;
+    width: 300px;
+    resize: vertical;
+    padding: 5px;
+}
+form #email {
+    width: 300px;
+    padding: 5px;
+}
+.btn {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background: orange;
+    color: white;
+}
+.btn:hover {
+    animation-name: btn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+@keyframes btn {
+    100% {
+        background: var(--brown);
+        transform: scale(1.1);
+    }
+}
+
+/* FOOTER */
+footer {
+    background: var(--white);
+    color: var(--text);
+    height: 100px;
+    margin-top: 20px;
+    border-top: var(--border); 
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+}
+footer img {
+    height: 100px;
+}
+footer .copy {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+footer .social {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.social i {
+    font-size: 1.5em;
+} 
+.social a {
+    text-decoration: none;
+    color: var(--text);
+}
+.social a:hover {
+    color: orange;
+}
+
+/* splats */
+.splats img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+.splat-1 {
+    position: relative;
+    top: -500px;
+    margin-bottom: -500px;
+    left: -250px;
+    z-index: -1;
+}
+.splat-2 {
+    position: relative;
+    /* top: 100px; */
+    margin-bottom: -500px;
+    left: 450px;
+    z-index: -1;
+}
+.splat-3 {
+    position: relative;
+    /* top: 50px; */
+    margin-bottom: -450px;
+    left: 20px;
+    z-index: -1;
+    width: 50%;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1100px) {
+    #header-img {
+        margin-left: 5vw;
+    }
+    #nav-bar {
+        margin-right: 5vw;
+    }
+    main {
+        width: 90vw;
+    }
+    #contact form{
+        width: 90vw;
+    }
+    .splat-2 {
+        left: 300px;
+    }
+}
+@media (max-width: 860px) {
+    .bookmarks {
+        height: 40px;
+        padding: 5px;
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .splat-2 {
+        left: 150px;
+    }
+}
+@media (max-width: 720px) {
+   .cover-grid {
+       grid-template-areas:
+       "book bm-1"
+       "book bm-2"
+       "book bm-3"
+       "book bm-4"
+       "book bm-5"
+       "book bm-6";
+       grid-template-columns: 1fr 1fr;
+       grid-gap: 20px;
+   }
+   #cover img {
+       width: 50vw;
+   }
+}
+@media (max-width: 650px) {
+    .splat-2 {
+        left: 50px;
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    #header-img {
+        margin-left: 2vw;
+    }
+    #nav-bar {
+        margin-right: 2vw;
+    }
+}
+@media (max-width: 580px) {
+    .splat-2 {
+        left: -100px;
+        width: 50%;
+    }
+    #nav-bar ul li {
+        padding: 0.8em;
+    }
+    .cover-grid {
+        grid-template-areas:
+        "book"
+        "bm-1"
+        "bm-2"
+        "bm-3"
+        "bm-4"
+        "bm-5"
+        "bm-6";
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    #cover img {
+        width: 80vw;
+    }
+}
